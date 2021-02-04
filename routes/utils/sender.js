@@ -6,8 +6,8 @@ async function sendMail(mailDetails) {
         port: 587,
         secure: false, // true for 465, false for other ports
         auth: {
-            user: 'postmaster@bulkmail.adbro.in', // generated ethereal user
-            pass: 'bbed43e2cb2aee74aa48723a2f611ce6-28d78af2-584deb60', // generated ethereal password
+            user: process.env.mailUsername, // generated ethereal user
+            pass: process.env.mailPassword, // generated ethereal password
         },
     });
     // send mail with defined transport object
